@@ -9,8 +9,8 @@ import {
     LatestInvoicesSkeleton, 
     CardsSkeleton 
 } from '@/app/ui/skeletons';
-
 import { Metadata } from 'next';
+import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
     title: 'Dashboard',
@@ -32,6 +32,7 @@ export default async function Page() {
             <Suspense fallback={<CardsSkeleton />}>
                 <CardWrapper />
             </Suspense>
+            <Button>Click me</Button>
             </div>
             <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8">
                 <Suspense fallback={<RevenueChartSkeleton />}>
